@@ -57,7 +57,7 @@ class Indexer:
     def output(self,index,filename):
         with open(filename,"w") as outstream:
             for entry in index.keys():
-                outstream.write(entry+"\t"+index[entry]+"\n")
+                outstream.write(entry+"\t"+str(index[entry])+"\n")
 
     def processEventFile(self):
         infile=self.parameters["thesdir"]+self.parameters["thesfile"]
